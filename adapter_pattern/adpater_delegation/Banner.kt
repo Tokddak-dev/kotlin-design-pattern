@@ -1,6 +1,6 @@
 package adapter_pattern.adpater_delegation
 
-open class Banner(
+class Banner(
     private val string: String
 ) {
     fun showWithParen() {
