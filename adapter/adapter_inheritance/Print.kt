@@ -1,4 +1,4 @@
-package adapter_pattern.adapter_inheritance
+package adapter.adapter_inheritance
 
 interface Print {
     fun printWeak()

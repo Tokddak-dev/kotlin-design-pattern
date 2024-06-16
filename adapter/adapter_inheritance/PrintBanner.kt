@@ -1,4 +1,4 @@
-package adapter_pattern.adapter_inheritance
+package adapter.adapter_inheritance
 
 class PrintBanner(string: String) : Banner(string), Print {
     override fun printWeak() {

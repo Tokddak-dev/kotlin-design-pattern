@@ -1,4 +1,4 @@
-package adapter_pattern.adapter_inheritance
+package adapter.adapter_inheritance
 
 fun main() {
     val printBanner = PrintBanner("Hello")

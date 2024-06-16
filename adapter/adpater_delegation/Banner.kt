@@ -1,4 +1,4 @@
-package adapter_pattern.adpater_delegation
+package adapter.adpater_delegation
 
 class Banner(
     private val string: String

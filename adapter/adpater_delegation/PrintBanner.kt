@@ -1,4 +1,4 @@
-package adapter_pattern.adpater_delegation
+package adapter.adpater_delegation
 
 class PrintBanner(
     private val banner: Banner
