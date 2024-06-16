@@ -1,7 +1,7 @@
-package fatory_pattern.idcard
+package fatory.idcard
 
-import fatory_pattern.framework.Factory
-import fatory_pattern.framework.Product
+import fatory.framework.Factory
+import fatory.framework.Product
 
 class IDCardFactory: Factory() {
     private val owners = mutableListOf<String>()

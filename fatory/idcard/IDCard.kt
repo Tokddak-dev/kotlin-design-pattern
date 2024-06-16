@@ -1,6 +1,6 @@
-package fatory_pattern.idcard
+package fatory.idcard
 
-import fatory_pattern.framework.Product
+import fatory.framework.Product
 
 class IDCard constructor(
     private var owner: String

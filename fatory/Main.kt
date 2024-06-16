@@ -1,7 +1,7 @@
-package fatory_pattern
+package fatory
 
-import fatory_pattern.framework.Factory
-import fatory_pattern.idcard.IDCardFactory
+import fatory.framework.Factory
+import fatory.idcard.IDCardFactory
 
 fun main() {
     val factory: Factory = IDCardFactory()

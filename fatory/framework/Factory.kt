@@ -1,4 +1,4 @@
-package fatory_pattern.framework
+package fatory.framework
 
 abstract class Factory {
     fun create(owner: String): Product {

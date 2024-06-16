@@ -1,4 +1,4 @@
-package fatory_pattern.framework
+package fatory.framework
 
 abstract class Product {
     abstract fun use()
