@@ -2,8 +2,8 @@ package fatory.idcard
 
 import fatory.framework.Product
 
-class IDCard constructor(
-    private var owner: String
+class IDCard(
+    val owner: String
 ) : Product() {
     init {
         println("${owner}의 카드를 만듭니다.")
@@ -13,6 +13,4 @@ class IDCard constructor(
     override fun use() {
         println("${owner}의 카드를 사용합니다.")
     }
-
-    fun getOwner() = owner
 }

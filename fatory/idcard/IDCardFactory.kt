@@ -9,6 +9,6 @@ class IDCardFactory: Factory() {
     override fun createProduct(owner: String): Product = IDCard(owner)
 
     override fun registerProduct(product: Product) {
-        owners.add((product as IDCard).getOwner())
+        owners.add((product as IDCard).owner)
     }
 }
