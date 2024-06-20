@@ -1,4 +1,4 @@
-package singleton
+package _5singleton
 
 /**
  * 연습 문제 5-3

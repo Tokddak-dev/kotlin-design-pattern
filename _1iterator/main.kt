@@ -1,4 +1,4 @@
-package iterator
+package _1iterator
 
 fun main() {
     val bookShelf = BookShelf(4)

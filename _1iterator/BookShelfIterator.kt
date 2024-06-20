@@ -1,4 +1,4 @@
-package iterator
+package _1iterator
 
 class BookShelfIterator(private val bookShelf: BookShelf) : Iterator<Book> {
     private var index = 0
