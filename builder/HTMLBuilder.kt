@@ -7,7 +7,7 @@ import java.nio.charset.Charset
 class HTMLBuilder : Builder() {
     private lateinit var filename: String
     private lateinit var writer: PrintWriter
-    override fun makeTitle(title: String) {
+    override fun innerMakeTitle(title: String) {
         filename = "$title.html"
         writer = PrintWriter(FileWriter(filename, Charset.defaultCharset(),))
 
@@ -20,11 +20,11 @@ class HTMLBuilder : Builder() {
 
     }
 
-    override fun makeString(str: String) {
+    override fun innerMakeString(str: String) {
         writer.println("<p>$str</p>")
     }
 
-    override fun makeItems(items: Array<String>) {
+    override fun innerMakeItems(items: Array<String>) {
         writer.println("<ul>")
 
         writer.println(items.map {
@@ -34,7 +34,7 @@ class HTMLBuilder : Builder() {
         writer.println("</ul>")
     }
 
-    override fun close() {
+    override fun makeClose() {
         writer.println("</body></html>")
         writer.close()
     }
