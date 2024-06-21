@@ -1,4 +1,4 @@
-package iterator
+package _1iterator
 
 interface Iterator<E> {
     fun hasNext(): Boolean

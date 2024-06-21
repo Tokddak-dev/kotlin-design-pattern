@@ -1,4 +1,4 @@
-package iterator
+package _1iterator
 
 class BookShelf(private val maxSize: Int): Iterable<Book> {
     val books: MutableList<Book> = mutableListOf()

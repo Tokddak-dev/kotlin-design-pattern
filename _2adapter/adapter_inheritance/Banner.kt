@@ -1,4 +1,4 @@
-package adapter.adapter_inheritance
+package _2adapter.adapter_inheritance
 
 open class Banner(
     private val string: String

@@ -1,4 +1,4 @@
-package singleton
+package _5singleton
 
 /**
  * 싱글톤 패턴 예시 객체
