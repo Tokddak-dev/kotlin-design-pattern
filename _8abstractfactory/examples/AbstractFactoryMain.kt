@@ -6,7 +6,6 @@ import _8abstractfactory.examples.factory.Page
 import _8abstractfactory.examples.factory.Tray
 import kotlin.system.exitProcess
 
-
 object AbstractFactoryMain {
   @JvmStatic
   fun main(args: Array<String>) {
