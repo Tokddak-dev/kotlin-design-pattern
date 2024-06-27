@@ -1,0 +1,7 @@
+Q. 예제 프로그램에 Entry의 인스턴스로부터 정체 경로를 얻는 기능을 추가하려고 합니다.
+예를 들어 File의 인스턴스에서 다음과 같은 문자열을 얻고자 합니다.
+`/root/usr/youngjin/Composite.java`
+
+예제 프로그램의 어떤 클래스를 어떻게 변경해야할까요?
+
+A. nullable 한 상위 계층인 parent라는 프로퍼티를 Entry 에 추가합니다. 그리고 parent 가 있을 때까지 계속해서 parent를 따라 올라가면서 경로를 만들어 반환하는 getFullPath() 메서드를 추가합니다.
