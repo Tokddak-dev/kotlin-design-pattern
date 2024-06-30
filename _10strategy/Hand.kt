@@ -1,21 +1,24 @@
 package _10strategy
 
-class Hand(
+enum class Hand(
     private val handvalue: Int
 ) {
+    HANDVALUE_GUU(0), // 주먹
+    HANDVALUE_CHO(1), // 가위
+    HANDVALUE_PAA(2), // 보
+    ;
+
     companion object {
-        const val HANDVALUE_GUU = 0; // 주먹
-        const val HANDVALUE_CHO = 1; // 가위
-        const val HANDVALUE_PAA = 2; // 보
-        val hand = listOf(
-            Hand(HANDVALUE_GUU),
-            Hand(HANDVALUE_CHO),
-            Hand(HANDVALUE_PAA),
+
+        private val hand = mapOf(
+            0 to HANDVALUE_GUU,
+            1 to HANDVALUE_CHO,
+            2 to HANDVALUE_PAA,
         )
 
         val name = listOf("주먹", "가위", "보")
 
-        fun getHand(handvalue: Int) = hand[handvalue]
+        fun getHand(handvalue: Int) = hand.getValue(handvalue)
     }
 
     fun isStrongerThan(h: Hand) = fight(h) == 1
@@ -27,5 +30,5 @@ class Hand(
         else -1
     }
 
-    override fun toString() = name[handvalue]
+    override fun toString(): String = Hand.name[handvalue]
 }

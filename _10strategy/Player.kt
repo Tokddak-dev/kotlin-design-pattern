@@ -22,7 +22,9 @@ class Player(
         gameCount++
     }
 
-    fun even() = gameCount++
+    fun even() {
+        gameCount++
+    }
 
     override fun toString(): String {
         return "[$name : $gameCount games, $winCount win, ${loseCount} lose]"
