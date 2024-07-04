@@ -1,0 +1,22 @@
+문제 8-3
+
+Q. ListLink 클래스(리스트 8-8)의 생성자를 보면 다음과 같습니다.
+```
+public ListLink(String caption, String url) {
+    super (caption, url);
+｝
+```
+
+즉. 하는 일은 상위 클래스의 생성자를 호출하는 것입니다. 특별한 처리가 필요 없다면, 왜 굳이 ListLink 의 생성자를 정의했을까요?
+
+A. 자바에서는 ListLink 클래스의 생성자를 정의한 이유는, ListLink 클래스의 생성자를 정의하지 않으면, 컴파일러가 자동으로 생성자를 만들어주지 않기 때문입니다. 따라서, ListLink 클래스의 생성자를 정의하지 않으면, ListLink 클래스의 생성자가 없어서 컴파일 오류가 발생합니다.
+코틀린에서도 마찬가지로, 하위 클래스의 생성자를 정의하지 않으면, 컴파일러가 자동으로 상위 클래스의 생성자를 호출하는 생성자를 만들어주지 않습니다. 따라서, 하위 클래스의 생성자를 정의하지 않으면, 하위 클래스의 생성자가 없어서 컴파일 오류가 발생합니다.
+다만 코틀린은 프로퍼티 개념을 활용하여 생성자를 대체하는 문법을 가지고 있습니다.
+```kotlin
+// Link(caption, url) 로 수정해야 오류가 나지 않는다.
+class ListLink(caption: String, url: String) : Link {
+  override fun makeHTML(): String {
+    return "  <li><a href=\"$url\">$caption</a></li>\n"
+  }
+}
+```
