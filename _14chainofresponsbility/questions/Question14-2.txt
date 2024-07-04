@@ -1,0 +1,3 @@
+Q. 예제 프로그램의 Support 클래스(리스트 14-2)에서 support 메소드는 public이지만, resolve 메소드는 protected입니다. 클래스 설계자가 이렇게 구분한 의도는 무엇일까요?
+
+A. public 메서드인 support를 노출하여 이를 사용하도록 유도했습니다.

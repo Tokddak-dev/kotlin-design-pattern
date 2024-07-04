@@ -1,0 +1,18 @@
+Q. 예제 프로그램의 support 메소드(리스트 14-2)를 재귀적으로 호출하는 대신 루프로 전개해 봅시다.
+
+A.
+```kotlin
+  fun support(trouble: Trouble) {
+    var obj: Support? = this
+    while (true) {
+      if (obj!!.resolve(trouble)) {
+        obj.done(trouble)
+        break
+      } else if (obj.next == null) {
+        obj.fail(trouble)
+        break
+      }
+      obj = obj.next
+    }
+  }
+```
