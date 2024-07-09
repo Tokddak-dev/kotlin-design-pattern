@@ -1,0 +1,2 @@
+Q. 예제 프로그램에 추가하는 형태로 새로운 Concrete Observer 역을 자유롭게 만들어 보세요. Main 클래스(리스트 17-6)를 변경하여 ConcreteObserver 역을 활용하도록 합시다.
+
