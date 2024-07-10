@@ -83,9 +83,9 @@ class LoginFrame(
     }
 
     private fun userpassChanged() {
-        if(textUser.text.isNotEmpty()) {
+        if(textUser.text.isNotEmpty() && textUser.text.length >=4) {
            textPass.setColleagueEnabled(true)
-           if(textPass.text.isNotEmpty()) {
+           if(textPass.text.isNotEmpty() && textPass.text.length >=4) {
                buttonOk.setColleagueEnabled(true)
            } else {
                buttonOk.setColleagueEnabled(false)

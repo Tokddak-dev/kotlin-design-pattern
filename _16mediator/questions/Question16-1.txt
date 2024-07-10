@@ -1,0 +1,21 @@
+Q.
+사용자 로그인일 때 사용자 이름과 패스워드 둘 다 4문자 이상 입력되었을 경우에만 OK 버튼이 유효하도록 예제 프로그램을 수정하려고 한다.
+어떤 클래스가 수정되어야 할까?
+
+A.
+LoginFrame 객체 내 userpassChanged() 함수를 수정해야 할 것 같다.
+```kt
+private fun userpassChanged() {
+    if(textUser.text.isNotEmpty() && textUser.text.length >=4) {
+        textPass.setColleagueEnabled(true)
+        if(textPass.text.isNotEmpty() && textPass.text.length >=4) {
+            buttonOk.setColleagueEnabled(true)
+        } else {
+            buttonOk.setColleagueEnabled(false)
+        }
+    } else {
+        textPass.setColleagueEnabled(false)
+        buttonOk.setColleagueEnabled(false)
+    }
+}
+```
