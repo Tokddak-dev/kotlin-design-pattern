@@ -1,0 +1,5 @@
+Q.
+예제 프로그램의 BigCharFactory 클래스(리스트 20-13)에서는 getBigChar 메소드가 synchronized 메소드로 되어 있습니다. synchronized 메소드로 만든 경우와 그렇지 않은은 경우의 차이는 무엇일까요?
+
+A.
+synchronized 를 사용하지 않으면 여러 쓰레드에서 동시에 호출하고 이로 인해 여러 개의 BigChar 인스턴스가 생성될 수 있습니다. synchronized 를 사용하면 한 번에 하나의 쓰레드만 getBigChar 메소드를 호출할 수 있으므로 여러 개의 BigChar 인스턴스가 생성되지 않습니다.

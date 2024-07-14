@@ -1,16 +1,16 @@
-package _20flyweight.examples
+package _20flyweight.questions._1
 
 class BigCharFactory private constructor() {
   private val pool: MutableMap<String, BigChar> = HashMap()
 
   @Synchronized
   fun getBigChar(charName: Char): BigChar {
-    var bc = pool[charName.toString()]
-    if (bc == null) {
-      bc = BigChar(charName)
-      pool[charName.toString()] = bc
+    var bigChar = pool[charName.toString()]
+    if (bigChar == null) {
+      bigChar = BigChar(charName)
+      pool[charName.toString()] = bigChar
     }
-    return bc
+    return bigChar
   }
 
   companion object {
