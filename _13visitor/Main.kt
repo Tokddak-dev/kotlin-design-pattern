@@ -1,0 +1,30 @@
+package _13visitor
+
+fun main() {
+    println("Making root entries...")
+    val rootDir = Directory("root")
+    val binDir = Directory("bin")
+    val tmpDir = Directory("tmp")
+    val usrDir = Directory("usr")
+    rootDir.add(binDir)
+    rootDir.add(tmpDir)
+    rootDir.add(usrDir)
+    binDir.add(File("vi", 10000))
+    binDir.add(File("latex", 20000))
+    rootDir.accept(ListVisitor())
+
+    println("")
+    println("Making user entries")
+    val kim = Directory("Kim")
+    val lee = Directory("Lee")
+    val park = Directory("Park")
+    usrDir.add(kim)
+    usrDir.add(lee)
+    usrDir.add(park)
+    kim.add(File("diary.html", 100))
+    kim.add(File("Builder.kt", 200))
+    lee.add(File("memo.txt", 300))
+    park.add(File("game.doc", 400))
+    park.add(File("junk.mail", 500))
+    rootDir.accept(ListVisitor())
+}
