@@ -1,6 +1,6 @@
 package _19state
 
-class DayState private constructor() : State {
+object DayState : State {
     /**
      * hour 야간이면 야간의 상태로 시스템을 이행한다.
      * 여기에서 상태전환이 발생한다.
@@ -28,12 +28,5 @@ class DayState private constructor() : State {
 
     override fun toString(): String {
         return "[주간]"
-    }
-
-    companion object {
-        private val singleton = DayState()
-
-        val instance: State
-            get() = singleton
     }
 }

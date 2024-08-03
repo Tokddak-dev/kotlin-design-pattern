@@ -13,7 +13,7 @@ class SafeFrame(title: String?) : Frame(title), ActionListener, Context {
     private val buttonPhone: Button = Button("일반통화")
     private val buttonExit: Button = Button("종료")
 
-    private var state: State = DayState.instance
+    private var state: State = DayState
 
     init {
         background = Color.lightGray

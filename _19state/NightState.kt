@@ -3,7 +3,7 @@ package _19state
 class NightState private constructor() : State {
     override fun doClock(context: Context, hour: Int) {
         if (hour in 9..16) {
-            context.changeState(DayState.instance)
+            context.changeState(DayState)
         }
     }
 
