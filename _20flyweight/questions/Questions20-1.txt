@@ -1,0 +1,5 @@
+Q. 예제 프로그램의 Bigstring 클래스(리스트 20-14)에 다음과 같은 생성자를 추가합니다.
+`BigString(String string, boolean shared)`
+shared가 true이 편 Bigchar를 공유하고 false이면 공유하지 않습니다.
+
+A. 코드 참고
